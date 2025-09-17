@@ -40,7 +40,7 @@ console.log(isEven(50));
 console.log(isEven(75));
 // → false
 console.log(isEven(-1));
-// → false
+
 // → ??
 */
 
