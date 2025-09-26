@@ -25,6 +25,11 @@ other code; when called with the same arguments, always produces the same
 value
 */
 
+console.log("/nExcercises 5.1: Flattening")
+let array =[[1,2,3], [4,5], [6]];
+let flattened = array.reduce((acc, curr)=>acc.concat(curr),[]);
+console.log(flattened);
+
 
 
 
