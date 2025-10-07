@@ -33,5 +33,35 @@
     link: "https://www.youtube.com/watch?v=O95-w2gACuA"
   }
  ]
-
  // complete with code to select and populate the table
+ 
+// Get the table element from the HTML
+const table = document.getElementById("bhangra");
+const headerRow = document.createElement("tr");
+for (let key of Object.keys(artists[0])) {
+  const th = document.createElement("th");
+  th.textContent = key;
+  headerRow.appendChild(th);
+}
+table.appendChild(headerRow);
+for (let artist of artists) {
+  const row = document.createElement("tr");
+
+  for (let key in artist) {
+    const cell = document.createElement("td");
+
+    if (key === "link") {
+      const a = document.createElement("a");
+      a.href = artist[key];
+      a.target = "_blank";
+      a.textContent = artist[key];
+      cell.appendChild(a);
+    } else {
+      cell.textContent = artist[key];
+    }
+
+    row.appendChild(cell);
+  }
+
+  table.appendChild(row);
+}
