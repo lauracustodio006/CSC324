@@ -34,8 +34,6 @@
   }
  ]
  // complete with code to select and populate the table
- 
-// Get the table element from the HTML
 const table = document.getElementById("bhangra");
 const headerRow = document.createElement("tr");
 for (let key of Object.keys(artists[0])) {
